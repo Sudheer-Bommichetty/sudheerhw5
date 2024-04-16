@@ -70,8 +70,7 @@ def question3():
     answers['Agree?'] = 'no'
 
     # type: explain_string
-    answers['Explain'] = 'The way Alans flips a coin and uses the majority result to anticipate changes in the stock market is not a good use of ensemble methods. A coin flip does not require any training or learning process, whereas ensemble approaches combine predictions from several separate classifiers trained on data. As a result, Alans method is seriously faulty and unlikely to produce useful stock market predictions.'
-
+    answers['Explain'] = 'Alans approach of predicting stock market movements by flipping a coin and using the majority outcome is not an effective application of ensemble methods. Ensemble methods involve combining predictions from multiple independent classifiers trained on data, whereas a coin flip does not involve any training or learning process. Therefore, Alans approach is fundamentally flawed and is unlikely to provide meaningful predictions for the stock market.'
     return answers
 
 
@@ -134,16 +133,14 @@ def question6():
     answers['(b) C2 better classifier than C1?'] = "no"
 
     # type: explain_string
-    answers['(b) C2 better classifier than C1? Explain'] = "When the false positive rate (FPR) and true positive rate (TPR) are equal, the classifiers function similarly to random guessing. As it boosts both TPR and FPR equally, increasing the likelihood of guessing the positive class does not increase the effectiveness of C2, yielding performance similar to random chance."
-
+    answers['(b) C2 better classifier than C1? Explain'] = "Both classifiers operate similarly to random guessing when the true positive rate (TPR) equals the false positive rate (FPR). Boosting the likelihood of predicting the positive class doesn't improve the effectiveness of C2, as it raises both TPR and FPR equally, resulting in performance comparable to random chance."
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
     answers['(c) Which metric?'] = "TPR/FPR"
 
     # type: explain_string
-    answers['(c) explain'] = "The positive predictions and their overall impact on performance in both classes are assessed by TPR and FPR. C1 and C2 perform similarly to the random guess baseline on a ROC curve because their TPR and FPR values are the same. When evaluating classifiers that generate random predictions for imbalanced classes, precision and recall—which ignore true negatives—offer fewer illuminating insights."
-
+    answers['(c) explain'] = "TPR and FPR evaluate the positive predictions and their overall influence on performance across both classes. Given that C1 and C2 share identical TPR and FPR values, they exhibit equivalent performance relative to the random guess baseline on an ROC curve. Precision and recall, which disregard true negatives, provide less informative insights when assessing classifiers that produce random predictions for imbalanced classes."
     return answers
 
 
@@ -156,26 +153,22 @@ def question7():
     answers['(i) Best classifier?'] = "C2"
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = "Because of its substantially higher recall/TPR and F1-measure than C1, C2 is the better classifier. This implies that C2 achieves a more advantageous balance between precision and recall while reliably detecting a higher number of positive cases."
-
+    answers['(i) Best classifier, explain'] = "C2 emerges as the superior classifier due to its significantly elevated recall/TPR and F1-measure compared to C1. This suggests that C2 accurately detects a greater number of positive instances while achieving a more favorable balance between precision and recall."
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
     answers['(ii) appropriate metric pair'] = "precision-recall-F1-Measure"
 
     # type: explain_string
-    answers['(ii) appropriate metric pair, explain'] = "Because they provide a thorough evaluation of a classifier's performance, precision, recall, and F1-measure are appropriate measures. This is especially important in situations involving imbalanced datasets, where positive instances are far less prevalent than negative ones."
-
+    answers['(ii) appropriate metric pair, explain'] = "Precision, recall, and F1-measure serve as suitable metrics as they offer a comprehensive assessment of a classifier's performance, particularly crucial in scenarios with imbalanced datasets where positive instances are significantly less common than negatives."
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
     answers['(iii) preferred classifier?'] = "C3"
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = "Because it can balance recall and precision, as shown by its greatest F1-measure among the classifiers, C2 is preferred. While C3 has the best precision, recall suffers as a result, making it less desirable in scenarios where recording all positive examples is essential."
- 
-
- return answers
+    answers['(iii) best classifier, explain'] = "C2 is favored due to its ability to strike a balance between precision and recall, evident from its highest F1-measure among the classifiers. Although C3 exhibits the highest precision, it does so at the cost of recall, rendering it less preferable for situations where capturing all positive instances is crucial."
+    return answers
 
 
 #-----------------------------------------------------------
